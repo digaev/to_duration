@@ -5,8 +5,8 @@ class ToDurationTest < ToDuration::Test
     refute_nil ::ToDuration::VERSION
   end
 
-  def test_that_the_numeric_instance_respond_to_to_duration
-    assert 0.respond_to?(:to_duration)
+  def test_that_the_numeric_has_instance_method_to_duration
+    assert Numeric.method_defined?(:to_duration)
   end
 
   def test_time
