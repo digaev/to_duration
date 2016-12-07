@@ -1,5 +1,8 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
+require 'coveralls'
+Coveralls.wear!
+
 require 'i18n'
 require 'minitest/autorun'
 require 'to_duration'
