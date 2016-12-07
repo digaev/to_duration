@@ -1,6 +1,6 @@
 # to_duration
 
-[![Gem Version](https://badge.fury.io/rb/to_duration.svg)](https://badge.fury.io/rb/to_duration) [![Build Status](https://travis-ci.org/digaev/to_duration.svg)](https://travis-ci.org/digaev/to_duration)
+[![Gem Version](https://badge.fury.io/rb/to_duration.svg)](https://badge.fury.io/rb/to_duration) [![Build Status](https://travis-ci.org/digaev/to_duration.svg)](https://travis-ci.org/digaev/to_duration) [![Coverage Status](https://coveralls.io/repos/github/digaev/to_duration/badge.svg?branch=master)](https://coveralls.io/github/digaev/to_duration?branch=master)
 
 A Ruby gem for converting seconds into human-readable format. This gem adds instance method `#to_duration` to `Numeric`.
 
