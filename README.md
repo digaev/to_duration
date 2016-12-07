@@ -29,7 +29,7 @@ irb(main):001:0> 12345.to_duration
 irb(main):002:0> 1234567890.to_duration
 => "39 years, 1 month, 14 days, 5 hours, 31 minutes and 30 seconds"
 
-irb(main):003:0> 1234567890.to_duration(weeks: true)
+irb(main):003:0> 1234567890.to_duration(week: true)
 => "39 years, 1 month, 2 weeks, 5 hours, 31 minutes and 30 seconds"
 ```
 
