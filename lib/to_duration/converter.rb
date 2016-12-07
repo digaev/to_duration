@@ -51,7 +51,7 @@ module ToDuration
         seconds -= count * v
 
         t_unit(k, count) if count > 0
-      end.compact
+      end.compact!
     end
 
     def t_unit(unit, count)
