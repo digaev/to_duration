@@ -49,7 +49,7 @@ irb(main):003:0> 1234567890.to_duration(week: true)
 
 ## Localization
 
-The gem uses [I18n](https://github.com/svenfuchs/i18n) for localization, so you just need to setup it :) Then add these lines into your tranlsations file(if you use Rails edit `config/locales/#{locale}.yml`):
+The gem uses [I18n](https://github.com/svenfuchs/i18n) for localization, so you just need to setup it :) Then add these lines into your translations file(if you use Rails edit `config/locales/#{locale}.yml`):
 
 ```yml
 to_duration:
