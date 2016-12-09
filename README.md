@@ -30,7 +30,7 @@ Or install it yourself as:
 | `:month` | Boolean | `true` |
 | `:week` | Boolean | `false` |
 | `:day` | Boolean | `true` |
-| `:hour` | Boolean  | `true` |
+| `:hour` | Boolean | `true` |
 | `:minute` | Boolean | `true` |
 | `:second` | Boolean | `true` |
 
