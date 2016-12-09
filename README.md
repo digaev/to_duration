@@ -20,6 +20,20 @@ Or install it yourself as:
 
     $ gem install to_duration
 
+## #to_duration(options = {})
+
+* **Options**
+
+| Name | Type | Default |
+|---|:-:|:-:|
+| `:year` | Boolean | `true` |
+| `:month` | Boolean | `true` |
+| `:week` | Boolean | `false` |
+| `:day` | Boolean | `true` |
+| `:hour` | Boolean  | `true` |
+| `:minute` | Boolean | `true` |
+| `:second` | Boolean | `true` |
+
 ## Usage
 
 ```ruby
@@ -33,19 +47,9 @@ irb(main):003:0> 1234567890.to_duration(week: true)
 => "39 years, 1 month, 2 weeks, 5 hours, 31 minutes and 30 seconds"
 ```
 
-## Options
-
-* `year` - default `true`
-* `month` - default `true`
-* `week` - default `false`
-* `day` - default `true`
-* `hour` - default `true`
-* `minute` - default `true`
-* `second` - default `true`
-
 ## Localization
 
-In your Rails application edit `config/locales/#{locale}.yml`:
+The gem uses [I18n](https://github.com/svenfuchs/i18n) for localization, so you just need to setup it :) Then add these lines into your tranlsations file(if you use Rails edit `config/locales/#{locale}.yml`):
 
 ```yml
 to_duration:
