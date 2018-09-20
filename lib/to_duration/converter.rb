@@ -42,7 +42,7 @@ module ToDuration
     }.freeze
 
     def to_units
-      return ['Less than 1 second'] if @value < 1
+      return ["< 1 #{I18n.t('to_duration.second', count: 1)}"] if @value < 1
       seconds = @value
 
       UNITS.map do |k, v|

@@ -10,7 +10,7 @@ class ToDurationTest < ToDuration::Test
   end
 
   def test_time
-    assert_equal 'Less than 1 second', 0.1.to_duration
+    assert_equal '< 1 second', 0.1.to_duration
     assert_equal '1 second', 1.to_duration
     assert_equal '1 hour, 1 minute and 1 second', 3661.to_duration
     assert_equal '2 hours, 2 minutes and 2 seconds', 7322.to_duration
