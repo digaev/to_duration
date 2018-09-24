@@ -49,27 +49,24 @@ module ToDuration
     end
 
     def to_s(options = {})
-      return t('less_than_one_second') if seconds < 1
+      return ToDuration.t('less_than_one_second') if seconds < 1
 
-      options = {}.tap do |defaults|
-        UNITS.keys.each { |k| defaults[k] = k != :weeks }
-      end.merge!(options)
+      units = to_units(options).map do |k, v|
+        "#{v} #{ToDuration.t(k.to_s.chop, count: v)}"
+      end
 
-      units_to_s(to_units(options))
+      units.join(', ').tap do |s|
+        s.gsub!(/,([^,]*)$/, " #{ToDuration.t('and')}\\1") if units.length > 1
+      end
     end
 
-    private
-
-    def t(key, options = {})
-      I18n.t("to_duration.#{key}", options)
-    end
-
-    def to_units(options)
+    def to_units(options = {})
+      options = { weeks: false }.merge!(options)
       duration = Duration.new(seconds)
 
       {}.tap do |units|
         UNITS.keys.each do |k|
-          next if options[k] != true
+          next if options.key?(k) && options[k] != true
 
           count = duration.public_send(k)
           next if count.zero?
@@ -78,14 +75,6 @@ module ToDuration
           duration.sub(k, count)
         end
       end
-    end
-
-    def units_to_s(units)
-      units = units.map { |k, v| "#{v} #{t(k.to_s.chop, count: v)}" }
-
-      s = units.join(', ')
-      s.gsub!(/,([^,]*)$/, " #{t('and')}\\1") if units.length > 1
-      s
     end
   end
 end
