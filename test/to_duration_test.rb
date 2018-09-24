@@ -20,7 +20,7 @@ class ToDurationTest < ToDuration::Test
     assert_equal '2 years, 2 months and 2 days', 684_720_00.to_duration
   end
 
-  def test_less_that_one_second
+  def test_less_than_one_second
     assert_equal 'Less than one second', 0.to_duration
     assert_equal 'Less than one second', 0.9.to_duration
   end
