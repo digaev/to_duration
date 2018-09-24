@@ -1,5 +1,5 @@
 class Numeric
   def to_duration(options = {})
-    ToDuration::Converter.call(to_i, options)
+    ToDuration::Duration.new(self).to_s(options)
   end
 end

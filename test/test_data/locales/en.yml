@@ -1,6 +1,7 @@
 en:
   to_duration:
     and: and
+    less_than_one_second: Less than one second
     year:
       one: year
       other: years
